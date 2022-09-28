@@ -14,7 +14,7 @@ class LoginScreen extends StatelessWidget {
               child: Column(
                 children: [
                   Text("Register Now",
-                  style: TextStyle(color: ),
+                  style: TextStyle(color: Color()),
                   )
                 ],
               ),
