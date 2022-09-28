@@ -4,12 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class Themes {
   static final dark = ThemeData.dark().copyWith();
-  static final light = ThemeData.dark().copyWith(
-    primaryColor: Color(0xff0477FF),
-    canvasColor: Colors.white,
-    cardColor: const Color(0xffFFF5E9),
-    scaffoldBackgroundColor: const Color(0xffFFF5E9),
-    highlightColor: Colors.black,
+  static final light = ThemeData.light().copyWith(
     elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
             backgroundColor: MaterialStateProperty.all(const Color(0xff0477FF)),
@@ -64,34 +59,10 @@ class Themes {
           fontFamily: GoogleFonts.poppins().fontFamily,
           color: const Color(0xff141313),
         )),
-
-    // appBarTheme: AppBarTheme(
-    //   color: Colors.white,
-    //   elevation: 0,
-    //   iconTheme: IconThemeData(color: Colors.black),
-    //   textTheme: TextTheme(
-    //     headline6: TextStyle(
-    //       color: Colors.black,
-    //       fontSize: 20,
-    //       fontWeight: FontWeight.bold,
-    //     ),
-    //   ),
-    // ),
-    // bottomNavigationBarTheme: BottomNavigationBarThemeData(
-    //   backgroundColor: Colors.white,
-    //   selectedItemColor: Colors.black,
-    //   unselectedItemColor: Colors.grey,
-    //   elevation: 0,
-    // ),
-    // textTheme: TextTheme(
-    //   bodyText1: TextStyle(
-    //     color: Colors.black,
-    //     fontSize: 16,
-    //   ),
-    //   bodyText2: TextStyle(
-    //     color: Colors.black,
-    //     fontSize: 14,
-    //   ),
-    // ),
+    primaryColor: Color(0xff0477FF),
+    canvasColor: Colors.white,
+    cardColor: const Color(0xffFFF5E9),
+    scaffoldBackgroundColor: const Color(0xffFFF5E9),
+    highlightColor: Colors.black,
   );
 }
