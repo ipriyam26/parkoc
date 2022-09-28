@@ -10,7 +10,7 @@ class LoginScreen extends StatelessWidget {
         child: Column(
           children: [
             const FlutterLogo(),
-            const Container()
+             Container()
 
           ],
         ),
