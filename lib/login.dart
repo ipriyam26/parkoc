@@ -34,7 +34,7 @@ class LoginScreen extends StatelessWidget {
                 elevation: 10,
                 color: const Color(0xffFFF5E9),
                 borderRadius: BorderRadius.circular(12.r),
-                child: Container(
+                child: SizedBox(
                   height: 260.h,
                   width: 284.w,
                   // color: Colors.amber,
@@ -47,7 +47,7 @@ class LoginScreen extends StatelessWidget {
                       Text(
                         "Register Now",
                         style: TextStyle(
-                          color: Color(0xff0477FF),
+                          color: const Color(0xff0477FF),
                           fontFamily: GoogleFonts.poppins().fontFamily,
                           fontSize: 18,
                           fontWeight: FontWeight.w600,
@@ -71,7 +71,7 @@ class LoginScreen extends StatelessWidget {
                                 ),
                                 hintText: "Enter Your Email",
                                 hintStyle: TextStyle(
-                                  color: Color(0xff141313),
+                                  color: const Color(0xff141313),
 
                                   fontFamily: GoogleFonts.poppins().fontFamily,
                                   fontSize: 12,
@@ -92,7 +92,7 @@ class LoginScreen extends StatelessWidget {
                                 ),
                                 hintText: "Password",
                                 hintStyle: TextStyle(
-                                  color: Color(0xff141313),
+                                  color: const Color(0xff141313),
 
                                   fontFamily: GoogleFonts.poppins().fontFamily,
                                   fontSize: 12,
@@ -114,7 +114,7 @@ class LoginScreen extends StatelessWidget {
                     //   )
                     // )
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Color(0xff0477FF)),
+                      backgroundColor: MaterialStateProperty.all(const Color(0xff0477FF)),
                       shape: MaterialStateProperty.all(RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5.r)
                       ))
@@ -132,7 +132,7 @@ class LoginScreen extends StatelessWidget {
                 ElevatedButton(onPressed: null, 
               
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Color(0xff0477FF)),
+                    backgroundColor: MaterialStateProperty.all(const Color(0xff0477FF)),
                     shape: MaterialStateProperty.all(RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5.r)
                     ))
