@@ -13,7 +13,7 @@ class LoginScreen extends StatelessWidget {
              Container(
               child: Column(
                 children: [
-                  
+                  Text("Register Now")
                 ],
               ),
              )
