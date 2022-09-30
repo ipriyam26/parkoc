@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
             home:  
             
             
-SplashScreen(key: key,)
+const SplashScreen(),
              
              );
       },

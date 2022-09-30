@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:parkoc/home.dart';
 import 'package:parkoc/login_controller.dart';
+import 'package:parkoc/signup.dart';
 
 class LoginScreen extends StatelessWidget {
   // const LoginScreen({Key? key}) : super(key: key);
@@ -55,7 +56,7 @@ class LoginScreen extends StatelessWidget {
                           height: 25.h,
                         ),
                         Text(
-                          "Register Now",
+                          "Login Now",
                           style: TextStyle(
                             color: const Color(0xff0477FF),
                             fontFamily: GoogleFonts.poppins().fontFamily,
@@ -160,7 +161,9 @@ class LoginScreen extends StatelessWidget {
                 children: [
                   const Text("Already have an account?"),
                   ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.to(const SignUpScreen());
+                      },
                       style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all(
                               const Color(0xff0477FF)),
@@ -168,7 +171,7 @@ class LoginScreen extends StatelessWidget {
                               RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(5.r)))),
                       child: Text(
-                        "Login",
+                        "Register",
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w600,
