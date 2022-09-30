@@ -18,12 +18,12 @@ class Themes {
             fontFamily: GoogleFonts.poppins().fontFamily,
             color: const Color(0xff141313)),
         headline3: TextStyle(
-          color: light.primaryColor,
+          color: const Color(0xff0477FF),
           fontSize: 24.sp,
           fontWeight: FontWeight.w600,
           fontFamily: GoogleFonts.poppins().fontFamily,
         ),
-        bodyMedium: TextStyle(
+        headline5: TextStyle(
             color: const Color(0xff141313),
             fontSize: 12.sp,
             fontWeight: FontWeight.w500,
@@ -36,7 +36,7 @@ class Themes {
           fontFamily: GoogleFonts.poppins().fontFamily,
         ),
         headline1: TextStyle(
-          color: light.primaryColor,
+          color: const Color(0xff0477FF),
           fontSize: 18.sp,
           fontWeight: FontWeight.w600,
           fontFamily: GoogleFonts.poppins().fontFamily,

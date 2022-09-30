@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:parkoc/home.dart';
+import 'package:parkoc/theme.dart';
 
 
 void main() {
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return GetMaterialApp(
             title: 'Flutter Demo',
-            // theme: Themes.light,
+            theme: Themes.light,
             // darkTheme: Themes.dark,
             home:  HomeScreen());
       },
