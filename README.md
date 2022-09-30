@@ -1,4 +1,6 @@
-# parkoz
+# PARKOZ
+
+<a> <img src="https://github.com/Pranay-Kumar-1215/parkoz-1/blob/master/Parkoz.png" alt="firebase" width="100" height="100"/> </a> 
 
 A new Flutter project.
 
