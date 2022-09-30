@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:parkoc/home.dart';
+import 'package:parkoc/select.dart';
 import 'package:parkoc/theme.dart';
 
 
@@ -21,10 +22,11 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) {
         return GetMaterialApp(
+          debugShowCheckedModeBanner: false,
             title: 'Flutter Demo',
             theme: Themes.light,
             darkTheme: Themes.dark,
-            home:  HomeScreen());
+            home:   SelectScreen());
       },
     );
   }
