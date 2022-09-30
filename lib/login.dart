@@ -123,7 +123,12 @@ class LoginScreen extends StatelessWidget {
                         ),
                         // TextFormField()
                         ElevatedButton(
-                            onPressed: null,
+                            onPressed: () {
+                              var res = controller.login();
+                              if (res) {
+                                Get.to(HomeScreen());
+                              }
+                            },
                             // style: ElevatedButton.styleFrom(
                             //   // primary: Color(0xff0477FF),
                             //   backgroundColor: Color(0xff0477FF),
