@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:parkoc/get_opener.dart';
 
@@ -13,7 +12,7 @@ class HomeScreen extends StatelessWidget {
     var carNumber = "MH12AB1234";
     var icon = Icons.car_crash_sharp;
     return Scaffold(
-      backgroundColor: Color(0xffFFF5E9),
+      backgroundColor: const Color(0xffFFF5E9),
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: 23.w),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -101,7 +100,7 @@ class HomeScreen extends StatelessWidget {
                               children: [
                                  Icon(
                                   icon,
-                                  color: Color(0xff0477FF),
+                                  color: const Color(0xff0477FF),
                                 ),
                                 SizedBox(
                                   width: 14.w,
@@ -134,12 +133,12 @@ class HomeScreen extends StatelessWidget {
         decoration: InputDecoration(
           hintText: "Where to?",
           hintStyle: TextStyle(
-            color: Color(0xff0477FF),
+            color: const Color(0xff0477FF),
             fontSize: 14.sp,
             fontFamily: GoogleFonts.poppins().fontFamily,
             fontWeight: FontWeight.w300,
           ),
-          prefixIcon: Icon(
+          prefixIcon: const Icon(
             Icons.search,
             color: Color(0xff0477FF),
           ),
@@ -147,13 +146,13 @@ class HomeScreen extends StatelessWidget {
           fillColor: Colors.white,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10.r),
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
               color: Colors.white,
             ),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10.r),
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
               color: Colors.white,
             ),
           ),
@@ -174,10 +173,10 @@ class PopCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       
-        color: Color(0xff0477FF),
+        color: const Color(0xff0477FF),
           borderRadius: BorderRadius.circular(20.r),
           elevation: 10,
-      child: Container(
+      child: SizedBox(
         width: 314.w,
         height: 137.h,
 
@@ -263,7 +262,7 @@ class VehicleName extends StatelessWidget {
             children: [
                Icon(
                 icon,
-                color: Color(0xff0477FF),
+                color: const Color(0xff0477FF),
               ),
               SizedBox(
                 width: 14.w,
@@ -275,7 +274,7 @@ class VehicleName extends StatelessWidget {
                     fontFamily:
                         GoogleFonts.poppins().fontFamily,
                     fontWeight: FontWeight.w300,
-                    color: Color(0xff141313),
+                    color: const Color(0xff141313),
                     letterSpacing: -0.5),
               ),
               SizedBox(
@@ -288,7 +287,7 @@ class VehicleName extends StatelessWidget {
                     fontFamily:
                         GoogleFonts.poppins().fontFamily,
                     fontWeight: FontWeight.w300,
-                    color: Color(0xff141313),
+                    color: const Color(0xff141313),
                     letterSpacing: 1),
               )
             ],

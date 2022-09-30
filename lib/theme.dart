@@ -59,7 +59,7 @@ class Themes {
           fontFamily: GoogleFonts.poppins().fontFamily,
           color: const Color(0xff141313),
         )),
-    primaryColor: Color(0xff0477FF),
+    primaryColor: const Color(0xff0477FF),
     canvasColor: Colors.white,
     cardColor: const Color(0xffFFF5E9),
     scaffoldBackgroundColor: const Color(0xffFFF5E9),
