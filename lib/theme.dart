@@ -29,7 +29,7 @@ class Themes {
             fontSize: 12.sp,
             fontWeight: FontWeight.w500,
             fontFamily: GoogleFonts.poppins().fontFamily,
-            letterSpacing: -3),
+),
         headline4: TextStyle(
           color: const Color(0xff141313),
           fontSize: 12.sp,
@@ -64,7 +64,7 @@ class Themes {
     canvasColor: Colors.white,
     cardColor: const Color(0xffFFF5E9),
     scaffoldBackgroundColor: const Color(0xffFFF5E9),
-    focusColor: Color(0xffD9D9D966),
+    focusColor: Color(0xffD9D9D9),
     highlightColor: Colors.black,
     
   );
