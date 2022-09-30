@@ -129,37 +129,85 @@ class HomeScreen extends StatelessWidget {
         ,
         SizedBox(height: 22.h,),
         const PopCard(),
-       TextFormField(
-        decoration: InputDecoration(
-          hintText: "Where to?",
-          hintStyle: TextStyle(
-            color: const Color(0xff0477FF),
-            fontSize: 14.sp,
-            fontFamily: GoogleFonts.poppins().fontFamily,
-            fontWeight: FontWeight.w300,
-          ),
-          prefixIcon: const Icon(
-            Icons.search,
-            color: Color(0xff0477FF),
-          ),
-          filled: true,
-          fillColor: Colors.white,
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10.r),
-            borderSide: const BorderSide(
-              color: Colors.white,
-            ),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10.r),
-            borderSide: const BorderSide(
-              color: Colors.white,
-            ),
-          ),
-        ),
-       )
+        SizedBox(height: 21.h,),
+       const WhereToField()
         ]),
       ),
+    );
+  }
+}
+
+class WhereToField extends StatelessWidget {
+  const WhereToField({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+     alignment: Alignment.centerRight,
+      children: [
+        TextFormField(
+         autocorrect: false,
+         autofocus: false,
+         enableSuggestions: false,
+         style: Theme.of(context).textTheme.headline2,
+         decoration: InputDecoration(
+           hintText: "Where to?",
+           hintStyle: Theme.of(context).textTheme.headline2,
+           
+           prefixIcon:  Icon(
+             Icons.search,
+             size: 30.sp,
+             color: Theme.of(context).highlightColor,
+           ),
+           filled: true,
+           fillColor: Theme.of(context).focusColor.withOpacity(0.1),
+           enabledBorder: OutlineInputBorder(
+             borderRadius: BorderRadius.circular(15.r),
+             borderSide: const BorderSide(
+               color: Colors.white,
+             ),
+           ),
+           focusedBorder: OutlineInputBorder(
+             borderRadius: BorderRadius.circular(15.r),
+             borderSide: const BorderSide(
+               color: Colors.white,
+             ),
+           ),
+         ),
+        ),
+      Container(
+       width: 75.w,
+       height: 26.h,
+       margin: EdgeInsets.only(right: 12.w),
+       padding: EdgeInsets.symmetric(horizontal: 6.w),
+       decoration: BoxDecoration(
+borderRadius: BorderRadius.circular(20.r),
+         // color: const Color(0xff0477FF),
+       color: Theme.of(context).canvasColor,
+       ),
+       child: Row(
+         
+         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+         children: [
+
+         Icon(Icons.access_time_filled_outlined,
+         size: 18.sp,
+         ),
+         Text("Now",style: Theme.of(context).textTheme.bodyText2!.apply(
+           fontSizeDelta: -1.sp,
+         )),
+         Icon(Icons.keyboard_arrow_down_sharp,
+         
+         size: 18.sp,)
+         
+       ],),          
+
+
+       ),
+
+      ],
     );
   }
 }
