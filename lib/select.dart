@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:parkoc/login.dart';
 
 class SelectScreen extends StatelessWidget {
   const SelectScreen({Key? key}) : super(key: key);
@@ -17,7 +19,7 @@ class SelectScreen extends StatelessWidget {
           ),
         ),
         child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Column(
               children: [
@@ -31,14 +33,14 @@ class SelectScreen extends StatelessWidget {
               ],
             ),
             Column(
-                   
-
               children: [
                 Container(
                     width: 282.w,
                     height: 41.h,
                     child: ElevatedButton(
-                        onPressed: null,
+                        onPressed: () {
+                          Get.to( LoginScreen());
+                        },
                         child: Text(
                           "Register as User",
                           style: Theme.of(context).textTheme.subtitle1,

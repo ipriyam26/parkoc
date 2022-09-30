@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:parkoc/home.dart';
 import 'package:parkoc/select.dart';
+import 'package:parkoc/splash.dart';
 import 'package:parkoc/theme.dart';
 
 
@@ -26,7 +27,12 @@ class MyApp extends StatelessWidget {
             title: 'Flutter Demo',
             theme: Themes.light,
             darkTheme: Themes.dark,
-            home:   SelectScreen());
+            home:  
+            
+            
+SplashScreen(key: key,)
+             
+             );
       },
     );
   }
