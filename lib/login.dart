@@ -159,7 +159,7 @@ class LoginScreen extends StatelessWidget {
               ),
               Column(
                 children: [
-                  const Text("Already have an account?"),
+                  const Text("Don't have an account?"),
                   ElevatedButton(
                       onPressed: () {
                         Get.to(const SignUpScreen());
