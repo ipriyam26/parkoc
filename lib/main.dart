@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:parkoc/add_vehicle.dart';
 import 'package:parkoc/home.dart';
+import 'package:parkoc/private_parking_form.dart';
+import 'package:parkoc/profile.dart';
 import 'package:parkoc/select.dart';
 import 'package:parkoc/splash.dart';
 import 'package:parkoc/theme.dart';
@@ -31,7 +33,7 @@ class MyApp extends StatelessWidget {
             home:  
             
             
- AddVehicleScreen(),
+ PrivateParkingForm(),
              
              );
       },

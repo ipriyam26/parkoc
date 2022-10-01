@@ -48,18 +48,23 @@ class SelectScreen extends StatelessWidget {
                 SizedBox(
                   height: 8.h,
                 ),
-                Container(
-                  width: 282.w,
-                  height: 41.h,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.white),
-                    borderRadius: BorderRadius.circular(5.r),
-                  ),
-                  child: Text(
-                    "Register as Parking Owner",
-                    style: Theme.of(context).textTheme.subtitle1,
-                    textAlign: TextAlign.center,
+                InkWell(
+                  onTap: () {
+                    
+                  },
+                  child: Container(
+                    width: 282.w,
+                    height: 41.h,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.white),
+                      borderRadius: BorderRadius.circular(5.r),
+                    ),
+                    child: Text(
+                      "Register as Parking Owner",
+                      style: Theme.of(context).textTheme.subtitle1,
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                 ),
                 Container(

@@ -17,7 +17,13 @@ class Themes {
             fontWeight: FontWeight.w300,
             fontFamily: GoogleFonts.poppins().fontFamily,
             color: const Color(0xff141313)),
-        
+       headline6: TextStyle(
+          color: const Color(0xff141313),
+          fontSize: 24.sp,
+          fontWeight: FontWeight.w600,
+          fontFamily: GoogleFonts.poppins().fontFamily,
+          letterSpacing: -1
+        ), 
         headline3: TextStyle(
           color: const Color(0xff0477FF),
           fontSize: 24.sp,
