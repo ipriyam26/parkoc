@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:parkoc/booking.dart';
 import 'package:parkoc/get_opener.dart';
+import 'package:parkoc/profile.dart';
 
 class HomeScreen extends StatelessWidget {
   OpenerController controller = Get.put(OpenerController());
@@ -14,11 +16,29 @@ class HomeScreen extends StatelessWidget {
     var locationAddress = "Sector 12, Noida, Uttarpradesh";
     var icon = Icons.car_crash_sharp;
     return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 0,
+        onTap: (value) {
+          if (value == 1) {
+            Get.to(BookingsScreen());
+          }
+          if(value==2){
+            Get.to(ProfileScreen());
+          }
+        },
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.access_time_filled_outlined), label: "Booking"),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
+        ],
+      ),
       backgroundColor: const Color(0xffFFF5E9),
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: 23.w),
         child: SingleChildScrollView(
-          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             SizedBox(
               height: 50.h,
             ),
@@ -120,7 +140,8 @@ class HomeScreen extends StatelessWidget {
                             ],
                           ),
                         ),
-                        VehicleName(icon: icon, name: name, carNumber: carNumber),
+                        VehicleName(
+                            icon: icon, name: name, carNumber: carNumber),
                         VehicleName(
                             icon: Icons.bike_scooter_rounded,
                             name: name,
@@ -149,14 +170,17 @@ class HomeScreen extends StatelessWidget {
             const WhereToField(),
             SizedBox(
               height: 15.h,
-        
             ),
-            LocationWidget(location: location, locationAddress: locationAddress),
-             LocationWidget(location: location, locationAddress: locationAddress),
-             LocationWidget(location: location, locationAddress: locationAddress),
-             SizedBox(height: 35.h,),
-           const AroundYou()
-            
+            LocationWidget(
+                location: location, locationAddress: locationAddress),
+            LocationWidget(
+                location: location, locationAddress: locationAddress),
+            LocationWidget(
+                location: location, locationAddress: locationAddress),
+            SizedBox(
+              height: 35.h,
+            ),
+            const AroundYou()
           ]),
         ),
       ),
@@ -172,21 +196,24 @@ class AroundYou extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-     crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("Around you",
-        style: Theme.of(context).textTheme.headline4!.apply(
-         fontSizeFactor: 2,
-         fontSizeDelta: -2.sp,
-         fontWeightDelta: 2,
+        Text(
+          "Around you",
+          style: Theme.of(context).textTheme.headline4!.apply(
+                fontSizeFactor: 2,
+                fontSizeDelta: -2.sp,
+                fontWeightDelta: 2,
+              ),
         ),
+        SizedBox(
+          height: 10.h,
         ),
-        SizedBox(height: 10.h,),
         Image.asset(
-         'asset/map.png',
-        fit: BoxFit.cover,
-         width: 300.w,
-         height: 130.h,
+          'asset/map.png',
+          fit: BoxFit.cover,
+          width: 300.w,
+          height: 130.h,
         ),
       ],
     );
@@ -206,43 +233,49 @@ class LocationWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-height: 45.h,
-margin: EdgeInsets.only(top: 9.h),
+      height: 45.h,
+      margin: EdgeInsets.only(top: 9.h),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            height: 35.h,
-            width: 28.h,
-            alignment: Alignment.center,
-            decoration: BoxDecoration(color: Theme.of(context).primaryColor
-            ,shape: BoxShape.circle,
-            
-            ),
-     
-            child: Icon(Icons.location_on_rounded,
-            color: Theme.of(context).canvasColor,
-            size: 16.sp,
-            )),
-          SizedBox(width: 8.w,),
+              height: 35.h,
+              width: 28.h,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: Theme.of(context).primaryColor,
+                shape: BoxShape.circle,
+              ),
+              child: Icon(
+                Icons.location_on_rounded,
+                color: Theme.of(context).canvasColor,
+                size: 16.sp,
+              )),
+          SizedBox(
+            width: 8.w,
+          ),
           Container(
             width: 250.w,
             decoration: BoxDecoration(
-  border: Border(bottom: BorderSide(
-    color: Theme.of(context).highlightColor.withOpacity(0.1)
-  ))
-),
+                border: Border(
+                    bottom: BorderSide(
+                        color: Theme.of(context)
+                            .highlightColor
+                            .withOpacity(0.1)))),
             child: Column(
-crossAxisAlignment: CrossAxisAlignment.start,
-              children: [Text(location.toUpperCase(),
-              style: Theme.of(context).textTheme.headline5!.apply(
-                fontWeightDelta: 1
-              ),
-              
-              ),
-              Text(locationAddress,
-              style: Theme.of(context).textTheme.caption,
-              )
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  location.toUpperCase(),
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline5!
+                      .apply(fontWeightDelta: 1),
+                ),
+                Text(
+                  locationAddress,
+                  style: Theme.of(context).textTheme.caption,
+                )
               ],
             ),
           )

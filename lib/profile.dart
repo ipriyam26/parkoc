@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:parkoc/add_vehicle.dart';
+import 'package:parkoc/booking.dart';
+import 'package:parkoc/home.dart';
+import 'package:parkoc/parking_owner_signup.dart';
 import 'package:parkoc/user_controller.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -11,6 +15,26 @@ class ProfileScreen extends StatelessWidget {
     var label = "Your Vehicles";
 
     return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 2,
+        onTap: (value) {
+          if(value==0){
+            Get.to(HomeScreen());
+          }
+          if (value == 1) {
+            Get.to(BookingsScreen());
+          }
+          if(value==2){
+            Get.to(ProfileScreen());
+          }
+        },
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.access_time_filled_outlined), label: "Booking"),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
+        ],
+      ),
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: Container(
         margin: EdgeInsets.only(top: 41.h, left: 28.w, right: 28.w),
@@ -45,7 +69,10 @@ class ProfileScreen extends StatelessWidget {
               height: 38.h,
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Get.to( AddVehicleScreen());
+
+              },
               child: Container(
                 width: 282.w,
                 height: 41.h,
@@ -55,7 +82,7 @@ class ProfileScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(5.r),
                 ),
                 child: Text(
-                  "Register as Parking Owner",
+                  "Add Another Vehicle",
                   style: Theme.of(context)
                       .textTheme
                       .subtitle1!
@@ -72,10 +99,10 @@ class ProfileScreen extends StatelessWidget {
                 height: 41.h,
                 child: ElevatedButton(
                     onPressed: () {
-                      // Get.to( LoginScreen());
+                      Get.to( ParkingOwnerSignup());
                     },
                     child: Text(
-                      "Register as User",
+                      "Register as Parking Owner",
                       style: Theme.of(context).textTheme.subtitle1,
                     )
                     )),

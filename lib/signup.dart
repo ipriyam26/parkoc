@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:parkoc/home.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -263,7 +265,11 @@ class SignUpScreen extends StatelessWidget {
                       // TextFormField()
 
                       ElevatedButton(
-                          onPressed: null,
+                          onPressed: (){
+                            Get.to(
+                              HomeScreen()
+                            );
+                          },
                           // style: ElevatedButton.styleFrom(
                           //   backgroundColor: Color(0xff0477FF),
                           //   shape: RoundedRectangleBorder(
