@@ -62,7 +62,6 @@ class AddVehicleScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(3.r),
                       color: Theme.of(context).cardColor,
                       border: Border.all(
-
                           color: Theme.of(context).highlightColor, width: 0.5),
                     ),
                     child: DropdownButton(
