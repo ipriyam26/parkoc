@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:parkoc/private_parking_form_controller.dart';
+import 'package:parkoc/controller/private_parking_form_controller.dart';
 
 class PrivateParkingForm extends StatelessWidget {
   PrivateParkingFormController controller =
       Get.put(PrivateParkingFormController());
   @override
   Widget build(BuildContext context) {
-    List<Map<String, dynamic>> fields = [
+    final List<Map<String, dynamic>> fields = [
       {
         'label': 'Operational Hours',
         "tip": 'For how long you can provide your parking space?'
@@ -27,7 +27,7 @@ class PrivateParkingForm extends StatelessWidget {
         "tip": "Do you have any security services at your space?",
       }
     ];
-    List<List<String>> options = [
+   final List<List<String>> options = [
       [
         'Select Your Option',
         '12 Hour',
@@ -35,7 +35,7 @@ class PrivateParkingForm extends StatelessWidget {
       ],
       ['Select your option', 'Yes we have', 'No we dont']
     ];
-    var textStyle = TextStyle(
+   final  TextStyle textStyle = TextStyle(
       color: const Color(0xff141313),
       fontFamily: GoogleFonts.poppins().fontFamily,
       fontSize: 12,
@@ -90,7 +90,7 @@ class PrivateParkingForm extends StatelessWidget {
                         SizedBox(
               height: 13.h,
             ),
-            Container(
+            SizedBox(
                 width: 282.w,
                 height: 41.h,
                 child: ElevatedButton(

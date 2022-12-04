@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:parkoc/login.dart';
+import 'package:parkoc/screen/login.dart';
 
 class SelectScreen extends StatelessWidget {
   const SelectScreen({Key? key}) : super(key: key);

@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:parkoc/home.dart';
-import 'package:parkoc/login_controller.dart';
-import 'package:parkoc/signup.dart';
+import 'package:parkoc/controller/login_controller.dart';
+import 'package:parkoc/screen/signup.dart';
 
 class LoginScreen extends StatelessWidget {
   // const LoginScreen({Key? key}) : super(key: key);

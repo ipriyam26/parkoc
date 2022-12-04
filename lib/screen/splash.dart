@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:parkoc/login.dart';
-import 'package:parkoc/select.dart';
+import 'package:parkoc/screen/login.dart';
+import 'package:parkoc/screen/select.dart';
 import 'package:splashscreen/splashscreen.dart';
 
 

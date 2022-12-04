@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "87472838349",
+    "project_id": "parkocpk",
+    "storage_bucket": "parkocpk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:87472838349:android:a804db4db469b85771fb84",
+        "android_client_info": {
+          "package_name": "com.example.parkoc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "87472838349-dhvue4ob667bnki5j7933mh2q5l86ag2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJeyvNJ2j0Y29ySuE_DhQpNFuyB1duf3k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "87472838349-dhvue4ob667bnki5j7933mh2q5l86ag2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
