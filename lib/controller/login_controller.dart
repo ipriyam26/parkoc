@@ -8,8 +8,10 @@ class LoginController extends GetxController {
   void setEmail(String value) => email.value = value;
   void setPassword(String value) => password.value = value;
   bool login() {
-    if (email.value.contains('@') && password.value.length > 6) {
-      if (email.value == 'bhupesh@gmail.com' && password.value == 'bhupesh') {
+    // write regex for email
+// bool emailValid = ;
+    if (RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(email.value)&& password.value.length > 8) {
+      if (email.value == 'bhupesh@gmail.com' && password.value == 'bhupesh123') {
         Get.snackbar(
           "Login Successful",
           "Welcome Bhupesh",

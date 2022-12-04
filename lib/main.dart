@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:parkoc/screen/add_vehicle.dart';
 import 'package:parkoc/home.dart';
+import 'package:parkoc/nav.dart';
 import 'package:parkoc/private_parking_form.dart';
 import 'package:parkoc/screen/profile.dart';
 import 'package:parkoc/screen/select.dart';

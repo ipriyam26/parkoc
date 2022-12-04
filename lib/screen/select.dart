@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:parkoc/parking_owner_signup.dart';
 import 'package:parkoc/screen/login.dart';
+import 'package:parkoc/screen/signup.dart';
 
 class SelectScreen extends StatelessWidget {
   const SelectScreen({Key? key}) : super(key: key);
@@ -39,7 +41,7 @@ class SelectScreen extends StatelessWidget {
                     height: 41.h,
                     child: ElevatedButton(
                         onPressed: () {
-                          Get.to( LoginScreen());
+                          Get.to(SignUpScreen());
                         },
                         child: Text(
                           "Register as User",
@@ -50,7 +52,7 @@ class SelectScreen extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    
+                    Get.to(ParkingOwnerSignup());
                   },
                   child: Container(
                     width: 282.w,

@@ -27,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
     // bool loggedIn = await loginController.securelyLogin();
     // print(loggedIn);
     // if (loggedIn) {
-      Timer(const Duration(seconds: 4), () => Get.to(() => const SelectScreen()));
+      Timer(const Duration(seconds: 4), () => Get.to(() =>  LoginScreen()));
     // } else {
       // Timer(const Duration(seconds: 4), () => Get.to(() => Login()));
     // }

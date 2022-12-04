@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:parkoc/home.dart';
 import 'package:parkoc/controller/login_controller.dart';
+import 'package:parkoc/screen/select.dart';
 import 'package:parkoc/screen/signup.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -162,7 +163,7 @@ class LoginScreen extends StatelessWidget {
                   const Text("Don't have an account?"),
                   ElevatedButton(
                       onPressed: () {
-                        Get.to(const SignUpScreen());
+                        Get.to(const SelectScreen());
                       },
                       style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all(

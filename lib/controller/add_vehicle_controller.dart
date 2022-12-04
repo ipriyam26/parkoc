@@ -11,7 +11,7 @@ class AddVehicleController extends GetxController {
     if (vehicleName.value == '') {
       error += "Please Enter a valid Vehicle Name";
     }
-    if (vehicleRegistrationNumber.value == '') {
+    if (vehicleRegistrationNumber.value == '' || ! RegExp(r'[A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{4}').hasMatch(vehicleRegistrationNumber.value) ) {
       if (error != "") {
         error += '\n& ';
       }
@@ -23,6 +23,7 @@ class AddVehicleController extends GetxController {
       }
       error += "Please Select a Vehicle Type";
     }
+  
     if (error != '') {
       Get.snackbar(
         "Failure",
